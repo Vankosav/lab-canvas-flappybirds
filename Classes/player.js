@@ -7,7 +7,7 @@ class Player {
         this.height = 30;
         this.speedX = 0;
         this.speedY = 0;
-        this.gravity = 0.14;
+        this.gravity = 0.1;
         this.gravitySpeed = 0;
         this.img = new Image();
         this.img.src = "../images/flappy.png";
@@ -30,13 +30,13 @@ class Player {
 
         handleKeyDown(event) {
             if (event.code === 'Space') {
-                this.gravity = -0.7; // Change gravity to negative
+                this.gravity = -0.1; // Change gravity to negative
             }
         }
 
         handleKeyUp(event) {
             if (event.code === 'Space') {
-                this.gravity = 0.7; // Change gravity to positive
+                this.gravity = 0.1; // Change gravity to positive
             }
         }
 
