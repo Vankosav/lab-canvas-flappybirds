@@ -3,7 +3,7 @@ class Obstacles {
       this.x = x;
       this.y = y;
       this.ctx = ctx;
-      this.width = width;
+      this.width = width + 50;
       this.height = height;
       this.imgTop = new Image();
       this.imgTop.src = "../images/obstacle_top.png";
@@ -22,6 +22,7 @@ class Obstacles {
       this.x += -1;
     }
   }
+  //napravi da tube budu sire
   
   export default Obstacles;
   

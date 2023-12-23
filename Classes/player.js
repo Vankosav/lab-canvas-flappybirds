@@ -46,6 +46,21 @@ class Player {
         this.newPos();
         this.draw();
     }
+
+    isColliding(obstacles) {
+        for (let i = 0; i < obstacles.length; i++) {
+          if (
+            this.x < obstacles[i].x + obstacles[i].width &&
+            this.x + this.width > obstacles[i].x &&
+            this.y < obstacles[i].y + obstacles[i].height &&
+            this.y + this.height > obstacles[i].y
+          ) {
+            return true; // Collision detected
+          }
+        }
+        return false; // No collision detected
+      }
+      
 }
 
 export default Player;
